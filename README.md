@@ -9,8 +9,8 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 You can use react-native-fs + react-native-file-viewer.
 Install dependencies
 
-npm install react-native-fs react-native-file-viewer
-npm install @react-native-documents/picker react-native-fs xlsx
+>npm install react-native-fs react-native-file-viewer
+>npm install @react-native-documents/picker react-native-fs xlsx
 
 ## Give user permitions in AndroidMainifist.xml file
 
