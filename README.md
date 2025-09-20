@@ -12,10 +12,11 @@ Install dependencies
 >npm install react-native-fs react-native-file-viewer
 >npm install @react-native-documents/picker react-native-fs xlsx
 
-## Give user permitions in AndroidMainifist.xml file
+## Give user permissions in `AndroidManifest.xml`
 
-## <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> 
-## <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+```xml
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> 
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
 
 
