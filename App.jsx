@@ -15,7 +15,7 @@ import FileViewer from "react-native-file-viewer";
 export default function App() {
   const [excelData, setExcelData] = useState([]); // 2D array (rows & columns)
 
-  // 📂 Step 1: Pick Excel File & Parse
+  //  Pick Excel File & Parse
   const browseAndLoadExcel = async () => {
     try {
       const [res] = await pick({
@@ -44,14 +44,14 @@ export default function App() {
     }
   };
 
-  // ✏️ Step 2: Handle Editing
+  // Handle Editing
   const handleEdit = (rowIndex, colIndex, value) => {
     const updated = [...excelData];
     updated[rowIndex][colIndex] = value;
     setExcelData(updated);
   };
 
-  // 💾 Step 3: Save Edited Excel
+  // Save Edited Excel
   const saveExcel = async () => {
   try {
     const ws = XLSX.utils.aoa_to_sheet(excelData);
@@ -60,11 +60,11 @@ export default function App() {
 
     const wbout = XLSX.write(wb, { type: "base64", bookType: "xlsx" });
 
-    // 👇 Changed this part
+    
     const path =
       Platform.OS === "android"
-        ? `${RNFS.DownloadDirectoryPath}/edited_excel.xlsx` // ✅ Android → Downloads
-        : `${RNFS.DocumentDirectoryPath}/edited_excel.xlsx`; // ✅ iOS → Documents
+        ? `${RNFS.DownloadDirectoryPath}/edited_excel.xlsx` // Android → Downloads
+        : `${RNFS.DocumentDirectoryPath}/edited_excel.xlsx`; //  iOS → Documents
 
     await RNFS.writeFile(path, wbout, "base64");
 
@@ -77,7 +77,7 @@ export default function App() {
   }
 };
 
-  // 🖼️ Step 4: Render Excel Data
+  // Render Excel Data
   const renderRow = ({ item, index: rowIndex }) => (
     <View style={styles.row}>
       {item.map((cell, colIndex) => (
