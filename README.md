@@ -14,8 +14,8 @@ Install dependencies
 
 ## Give user permitions in AndroidMainifist.xml file
 
-<!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
-<!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> -->
+## <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> 
+## <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
 
 
